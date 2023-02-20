@@ -6,8 +6,6 @@ name: Python application
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 permissions:
   contents: read
@@ -37,3 +35,8 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
+
+    - name: Run Python script
+      env:
+        PRO_DEVOPS_BOT_TOKEN: ${{ secrets.PRO_DEVOPS_BOT_TOKEN }}
+      run: python app.py
