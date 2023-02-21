@@ -2,7 +2,7 @@ import discord
 import requests
 
 
-client = discord.Client()
+client = discord.client()
 
 @client.event
 async def on_ready():
