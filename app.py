@@ -10,7 +10,8 @@ intents = discord.Intents.default()
 intents.members = True
 
 # Pass the intents to the Client constructor
-client = discord.Client(intents=intents, token='PRO_DEVOPS_BOT_TOKEN')
+client = discord.Client(intents=intents)
+TOKEN = os.environ['PRO_DEVOPS_BOT_TOKEN']
 
 @client.event
 async def on_ready():
@@ -27,4 +28,4 @@ async def on_message(message):
         else:
             await message.channel.send("Sorry, there was an error fetching the roles.")
 
-client.run(os.environ['PRO_DEVOPS_BOT_TOKEN'])
+client.run(TOKEN)
