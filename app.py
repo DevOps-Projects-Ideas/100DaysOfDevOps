@@ -27,4 +27,4 @@ async def on_message(message):
         else:
             await message.channel.send("Sorry, there was an error fetching the roles.")
 
-client.run(('PRO_DEVOPS_BOT_TOKEN'))
+client.run('PRO_DEVOPS_BOT_TOKEN')
