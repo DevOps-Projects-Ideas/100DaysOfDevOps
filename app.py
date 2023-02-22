@@ -1,8 +1,16 @@
 import discord
 import requests
+import os
 
 
-client = discord.client()
+# Create an instance of the Intents class
+intents = discord.Intents.default()
+
+# Enable the specific intents that bot requires
+intents.members = True
+
+# Pass the intents to the Client constructor
+client = discord.Client(intents=intents)
 
 @client.event
 async def on_ready():
@@ -19,4 +27,4 @@ async def on_message(message):
         else:
             await message.channel.send("Sorry, there was an error fetching the roles.")
 
-client.run('PRO_DEVOPS_BOT_TOKEN')
+client.run(('PRO_DEVOPS_BOT_TOKEN'))
