@@ -10,7 +10,7 @@ intents = discord.Intents.default()
 intents.members = True
 
 # Pass the intents to the Client constructor
-client = discord.Client(intents=intents)
+client = discord.Client(intents=intents, token='PRO_DEVOPS_BOT_TOKEN')
 
 @client.event
 async def on_ready():
